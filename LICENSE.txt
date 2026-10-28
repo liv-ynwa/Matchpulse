@@ -1,0 +1,5 @@
+Match Pulse aggregate research status and documentation
+Copyright 2026 Red Half Lab
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+Licence terms: https://creativecommons.org/licenses/by/4.0/legalcode.en
+No rights to third-party source data or private models are granted.

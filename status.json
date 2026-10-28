@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "project": "Match Pulse",
+  "former_name": "Project B",
+  "stage": "Private research",
+  "target_release": "Q1 2027",
+  "target_is_estimate": true,
+  "evidence_updated_at": "2026-10-28T05:31:03.399327+00:00",
+  "controller_checked_at": "2026-10-28T05:36:03.833251+00:00",
+  "controller_status": "waiting",
+  "tracks": [
+    {
+      "id": "state-three",
+      "name": "Three-match form",
+      "historical_samples": 10,
+      "locked": 1,
+      "reconciled": 0,
+      "protocol": "Historical forward replay; within ±6 state points",
+      "caveat": "Rebuilt historical data. Three-match windows overlap.",
+      "model_hits": 8,
+      "baseline_hits": 3,
+      "historical_mean_confidence": 0.584,
+      "baseline": "Most frequent state band in the training data"
+    },
+    {
+      "id": "state-single",
+      "name": "Single-match form",
+      "historical_samples": 10,
+      "locked": 1,
+      "reconciled": 1,
+      "protocol": "Historical forward replay; within ±6 state points",
+      "caveat": "Rebuilt historical data; not an independent live trial.",
+      "model_hits": 5,
+      "baseline_hits": 3,
+      "historical_mean_confidence": 0.412,
+      "baseline": "Most frequent state band in the training data"
+    },
+    {
+      "id": "style",
+      "name": "Match style",
+      "historical_samples": 10,
+      "locked": 1,
+      "reconciled": 1,
+      "protocol": "Historical forward replay; next-match class",
+      "caveat": "Learned behaviour groups, not independently verified tactical labels.",
+      "model_hits": 3,
+      "baseline_hits": 4,
+      "model_log_loss": 1.269,
+      "baseline_log_loss": 1.458,
+      "baseline": "Training-period class frequencies"
+    },
+    {
+      "id": "red",
+      "name": "Red-card risk",
+      "historical_samples": 0,
+      "locked": 2,
+      "reconciled": 1,
+      "protocol": "Latest historical replay; labels required before scoring",
+      "baseline": "Training-period league event rate",
+      "caveat": "Latest replay has no scored labels."
+    },
+    {
+      "id": "yellow_zero",
+      "name": "No-yellow probability",
+      "historical_samples": 0,
+      "locked": 1,
+      "reconciled": 0,
+      "protocol": "Latest historical replay; labels required before scoring",
+      "baseline": "Training-period league event rate",
+      "caveat": "Latest replay has no scored labels."
+    },
+    {
+      "id": "yellow_count",
+      "name": "Yellow-card count",
+      "historical_samples": 0,
+      "locked": 2,
+      "reconciled": 1,
+      "protocol": "Latest historical replay; labels required before scoring",
+      "baseline": "Training-period league mean count",
+      "caveat": "Latest replay has no scored labels."
+    }
+  ],
+  "reliability": "Live reliability is not established. Research continues.",
+  "scope": "Aggregate research progress only. Match predictions, raw data and model files remain private.",
+  "license": "CC-BY-4.0"
+}

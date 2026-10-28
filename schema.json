@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Match Pulse aggregate research status",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "former_name",
+    "stage",
+    "target_release",
+    "target_is_estimate",
+    "evidence_updated_at",
+    "controller_checked_at",
+    "controller_status",
+    "tracks",
+    "reliability",
+    "scope",
+    "license"
+  ],
+  "properties": {
+    "project": {
+      "type": "string"
+    },
+    "former_name": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "target_release": {
+      "type": "string"
+    },
+    "evidence_updated_at": {
+      "type": "string"
+    },
+    "controller_checked_at": {
+      "type": "string"
+    },
+    "controller_status": {
+      "type": "string"
+    },
+    "reliability": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "target_is_estimate": {
+      "const": true
+    },
+    "delivery": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "historical_samples",
+          "locked",
+          "reconciled",
+          "protocol",
+          "caveat"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "caveat": {
+            "type": "string"
+          },
+          "baseline": {
+            "type": "string"
+          },
+          "metric_name": {
+            "type": "string"
+          },
+          "historical_samples": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "locked": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reconciled": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "model_hits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "baseline_hits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "model_log_loss": {
+            "type": "number",
+            "minimum": 0
+          },
+          "baseline_log_loss": {
+            "type": "number",
+            "minimum": 0
+          },
+          "model_score": {
+            "type": "number",
+            "minimum": 0
+          },
+          "baseline_score": {
+            "type": "number",
+            "minimum": 0
+          },
+          "historical_mean_confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  }
+}
